@@ -1,23 +1,21 @@
-export interface Goal {
+export interface GoalModel {
   id: number;
   title: string;
   description: string;
   dueDate: Date;
-  milestones: Milestone[];
+  milestones: MilestoneModel[];
 }
 
-export interface Milestone {
+export interface MilestoneModel {
   id: number;
   title: string;
-  description: string;
-  dueDate: Date;
+  dueDate?: Date;
   completed: boolean;
-  comments: Comment[];
+  comments?: CommentModel[];
 }
 
-export interface Comment {
+export interface CommentModel {
   id: number;
   text: string;
-  author: string;
   date: Date;
 }
